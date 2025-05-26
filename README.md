@@ -1,5 +1,8 @@
 # PlaylistApp
 
+## Live Demo Link
+https://mc-playlist-app.netlify.app/
+
 ## Thoughts, Comments & Challenges/Successes
 
 Challenges - Initially setting up the NgRx store as it's definitely been a while since I had to set one up from scratch, but once the main state was up and running, everything began to fell into place.
