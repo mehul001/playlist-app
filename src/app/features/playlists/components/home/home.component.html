@@ -1,0 +1,40 @@
+<div class="top-container">
+  <h2>Featured Playlists</h2>
+
+  <mat-form-field appearance="fill" class="search-bar">
+    <mat-label>Search by name...</mat-label>
+    <input matInput [formControl]="search" placeholder="Type to search..." />
+  </mat-form-field>
+</div>
+
+<div class="login-container" [formGroup]="loginForm" *ngIf="(authenticated$ | async) === false">
+  <mat-form-field appearance="outline" class="1search-bar">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="1search-bar">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" type="password"/>
+  </mat-form-field>
+
+  <button mat-flat-button (click)="onLogin()">Login</button>
+</div>
+
+<ng-container *ngIf="(authenticated$ | async) === true  && (currentUser$ | async) as user">
+  <div class="welcome-container">
+    <h2>Welcome back, {{ user.firstName }}! </h2>
+    <button mat-flat-button (click)="onLogout()">Logout</button>
+  </div>
+</ng-container>
+
+<div *ngIf="playlists$ | async as playlists" class="playlist-grid">
+  <app-playlist-item
+    *ngFor="let playlist of playlists"
+    [playlist]="playlist">
+  </app-playlist-item>
+</div>
+
+<div *ngIf="!(playlists$ | async)?.length" class="no-playlist">
+  <p>No playlists available.</p>
+</div>

@@ -1,0 +1,14 @@
+<mat-card class="playlist-card">
+  <mat-card-header>
+    <mat-card-title>
+      <a [href]="playlist.url" target="_blank" rel="noopener noreferrer">{{ playlist.name }}</a>
+    </mat-card-title>
+    <mat-card-subtitle>{{ playlist.curator_name }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="playlist.artwork" alt="{{ playlist.name }}" />
+  <mat-card-content>
+    <span class="id-tooltip" matTooltip="{{ playlist.id }}" *ngIf="(authenticated$ | async)">
+      <mat-icon style="margin-right: 4px;">info</mat-icon> ID
+    </span>
+  </mat-card-content>
+</mat-card>
