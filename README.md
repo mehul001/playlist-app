@@ -1,27 +1,9 @@
 # PlaylistApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+## Thoughts, Comments & Challenges/Successes
 
-## Development server
+Challenges - Initially setting up the NgRx store as it's definitely been a while since I had to set one up from scratch, but once the main state was up and running, everything began to fell into place.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Successes - Setting up the basic structure of the app, components and getting the database loaded into the state. Also managed to have a login feature where I noticed there was a users object so now on the state we have an `authenticated` property which can help hide/show components based on that
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Thoughts / Comments - Overall was a great task from start to end which covers most of the structure for any app from setting up the app, setting up the state, adding styles and basic "toast" notifications
